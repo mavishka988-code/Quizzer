@@ -1,0 +1,98 @@
+import os
+import shutil
+
+root = r'C:\xampp\htdocs\Quizzer_Project'
+
+dirs_to_create = ['css', 'js', 'images', 'includes', 'auth']
+for d in dirs_to_create:
+    os.makedirs(os.path.join(root, d), exist_ok=True)
+
+# File moves
+moves = {
+    'style.css': 'css/style.css',
+    'script.js': 'js/script.js',
+    'quiz-data.js': 'js/quiz-data.js',
+    'db.php': 'includes/db.php',
+    'auth_check.php': 'auth/auth_check.php',
+    'login.php': 'auth/login.php',
+    'register.php': 'auth/register.php',
+    'logout.php': 'auth/logout.php',
+    'contact.php': 'includes/submit_contact.php',
+    'view_contacts.php': 'includes/view_contacts.php',
+    
+    # Renames based on guideline explicitly referencing .php for main interfaces
+    'index.html': 'index.php',
+    'dashboard.html': 'dashboard.php',
+    'contact.html': 'contact.php'
+}
+
+for src, dest in moves.items():
+    s = os.path.join(root, src)
+    d = os.path.join(root, dest)
+    if os.path.exists(s):
+        shutil.move(s, d)
+
+# Handle assets folder rename
+if os.path.exists(os.path.join(root, 'assets')):
+    # move contents of assets to images
+    for item in os.listdir(os.path.join(root, 'assets')):
+        s = os.path.join(root, 'assets', item)
+        d = os.path.join(root, 'images', item)
+        shutil.move(s, d)
+    os.rmdir(os.path.join(root, 'assets'))
+
+# Replacements
+replacements = {
+    'href="style.css"': 'href="css/style.css"',
+    'style.css?v=2': 'css/style.css?v=2',
+    'src="script.js"': 'src="js/script.js"',
+    'src="quiz-data.js"': 'src="js/quiz-data.js"',
+    'assets/': 'images/',
+    'index.html': 'index.php',
+    'dashboard.html': 'dashboard.php',
+    'contact.html': 'contact.php',
+    "fetch('login.php')": "fetch('auth/login.php')",
+    "fetch('register.php')": "fetch('auth/register.php')",
+    "fetch('logout.php')": "fetch('auth/logout.php')",
+    "fetch('auth_check.php')": "fetch('auth/auth_check.php')",
+    "fetch('contact.php')": "fetch('includes/submit_contact.php')",
+    "require_once 'db.php'": "require_once '../includes/db.php'"
+}
+
+def fix_file(filepath):
+    try:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            content = f.read()
+            
+        original = content
+        for k, v in replacements.items():
+            if k == "require_once 'db.php'" and 'includes' in filepath.replace('\\', '/'):
+                # In includes directory, db.php is in the same folder
+                content = content.replace(k, "require_once 'db.php'")
+            else:
+                content = content.replace(k, v)
+        
+        if content != original:
+            with open(filepath, 'w', encoding='utf-8') as f:
+                f.write(content)
+            print(f"Updated paths in {filepath}")
+    except Exception as e:
+        print(f"Error processing {filepath}: {e}")
+
+# Apply to all files
+for root_dir, dirs, files in os.walk(root):
+    for filename in files:
+        if filename.endswith('.php') or filename.endswith('.html') or filename.endswith('.js') or filename.endswith('.css'):
+            fix_file(os.path.join(root_dir, filename))
+
+# Create functions.php
+functions_php = r"""<?php
+// includes/functions.php
+function sanitizeInput($data) {
+    return htmlspecialchars(stripslashes(trim($data)));
+}
+?>"""
+with open(os.path.join(root, 'includes', 'functions.php'), 'w', encoding='utf-8') as f:
+    f.write(functions_php)
+
+print("Restructuring Complete.")

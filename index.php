@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quizzer - Home</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css?v=2">
+</head>
+
+<body class="dark-theme">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.php">
+        <i class="fa-solid fa-shapes text-primary"></i> Quizzer
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.php">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="dashboard.php">DashBoard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.php">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-flex">
+        <a href="login.html" class="profile-icon">
+          <i class="fa-regular fa-circle-user"></i>
+          <span>Log In</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="py-5 mt-4 fade-in">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <h1 class="display-4 fw-bold mb-4 text-glow">Test Your Knowledge<br>Take interactive quizzes across multiple
+            categories</h1>
+          <p class="lead text-muted mb-5">Join our platform today to challenge yourself in Sports, History, Tech, and
+            more and climb the leaderboard!</p>
+          <a href="signup.html" class="btn btn-primary-custom btn-lg px-5 shadow-lg rounded-pill"
+            style="border: none !important;">Sign Up Here</a>
+        </div>
+        <div class="col-lg-6 position-relative mt-5 mt-lg-0" style="min-height: 400px;">
+          <!-- Back Right Frame -->
+          <div
+            class="position-absolute glass-card shadow-lg rounded-4 d-none d-md-flex align-items-center justify-content-center"
+            style="width: 60%; max-width: 300px; height: 220px; right: 5%; top: 10px; border: 1px solid rgba(0,212,255,0.3); transform: rotate(10deg); z-index: 1;">
+            <i class="fa-solid fa-play fa-2x" style="color: rgba(12, 44, 108, 0.4);"></i>
+          </div>
+
+          <!-- Middle Left Frame -->
+          <div
+            class="position-absolute glass-card shadow-lg rounded-4 d-none d-md-flex align-items-center justify-content-center"
+            style="width: 55%; max-width: 250px; height: 190px; left: 0; bottom: 30px; border: 1px solid rgba(0,212,255,0.5); transform: rotate(-8deg); z-index: 2;">
+            <i class="fa-solid fa-play fa-2x" style="color: rgba(0,212,255,0.6);"></i>
+          </div>
+
+          <!-- Front Main Frame (Animated Video Preview) -->
+          <div class="position-absolute shadow-lg rounded-4 overflow-hidden"
+            style="width: 100%; max-width: 450px; height: 280px; left: 50%; top: 50px; transform: translateX(-50%); border: 2px solid #00d4ff; z-index: 3; background: #000; box-shadow: 0 0 40px rgba(0,212,255,0.3) !important;">
+            <div class="w-100 h-100 position-relative">
+              <!-- Video Frames -->
+              <img src="images/why-quizzer.avif" class="video-frame video-frame-1" alt="Frame 1">
+              <img src="images/analytics.avif" class="video-frame video-frame-2" alt="Frame 2">
+              <img src="images/start-now.avif" class="video-frame video-frame-3" alt="Frame 3">
+
+              <!-- Overlay Play Button -->
+              <div
+                class="w-100 h-100 d-flex flex-column align-items-center justify-content-center position-absolute top-0 start-0"
+                style="background: rgba(0,0,0,0.4); z-index: 10;">
+                <i class="fa-solid fa-circle-play text-white"
+                  style="font-size: 5rem; text-shadow: 0 0 25px #00d4ff; cursor: pointer; transition: transform 0.2s;"
+                  onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Section -->
+  <section class="py-5 fade-in">
+    <div class="container">
+      <h2 class="text-center mb-5 display-5 fw-bold">Why choose Quizzer?</h2>
+      <div class="row align-items-center">
+        <div class="col-lg-5 offset-lg-1 mb-4 mb-lg-0">
+          <div class="glass-card p-4 text-start d-flex flex-column justify-content-center"
+            style="height: 300px; background: linear-gradient(135deg, #000000 0%, #001f3f 100%); border: 1px solid rgba(0, 212, 255, 0.3);">
+            <h4 class="fw-bold mb-3" style="color: #00d4ff;">About Us</h4>
+            <p class="text-white" style="font-size: 0.95rem; line-height: 1.6;">
+              Quizzer is your ultimate destination for interactive learning and fun. We bridge the gap between education
+              and entertainment, offering a seamless platform to challenge your mind and compete with a global
+              community.
+            </p>
+            <p class="text-white-50 small">
+              Empowering curious minds through gamified knowledge since 2026.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="shadow-lg"
+            style="height: 300px; border-radius: 20px; overflow: hidden; border: 1px solid rgba(0, 212, 255, 0.3);">
+            <img src="images/why-quizzer.avif" alt="Why Quizzer" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ask and Get Answers Section -->
+  <section class="py-5 fade-in" style="background-color: #021845; border-radius: 25px; margin: 30px 0;">
+    <div class="container">
+      <div class="glass-card"
+        style="background: rgba(249, 250, 251, 0.9); border: none; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+        <div class="row align-items-center p-3">
+          <div class="col-md-7 mb-4 mb-md-0 pe-md-5">
+            <h3 class="fw-bold mb-3" style="color: #1a1a1a;"><i class="fa-solid fa-chart-line me-2"
+                style="color:#00d4ff;"></i>
+              Real-Time Analytics</h3>
+            <p class="text-muted">Track user responses in real-time. Gain powerful insights into your audience with our
+              detailed dashboards.</p>
+          </div>
+          <div class="col-md-5">
+            <div class="shadow-lg" style="height: 220px; border-radius: 16px; overflow: hidden;">
+              <img src="images/analytics.avif" alt="Real Time Data"
+                style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="py-5 fade-in">
+    <div class="container">
+      <div class="rounded px-4 py-5 mb-5 shadow-lg"
+        style="background: linear-gradient(135deg, #000000 0%, #000a1a 50%, #001a33 100%); border: 1px solid rgba(0, 212, 255, 0.2);">
+        <div class="row align-items-center">
+          <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
+            <h3 class="fw-bold fs-2 text-white">Try It For Free</h3>
+            <p class="text-white-50 mb-4 small">Start Answering Your Quiz Today</p>
+            <a href="dashboard.php" class="btn btn-outline-custom" style="border-color: #00d4ff; color: #00d4ff;">Quick
+              Start</a>
+          </div>
+          <div class="col-md-8">
+            <div class="w-100 border-0 shadow-lg"
+              style="height: 180px; border-radius: 12px; overflow: hidden; background: rgba(255,255,255,0.05);">
+              <img src="images/start-now.avif" alt="Get Started" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- More Details -->
+  <div class="row mt-5">
+    <div class="col-md-10 offset-md-1 text-center">
+      <p class="text-uppercase small fw-bold tracking-wider mb-2" style="color: #00d4ff;">Why Choose Quizzer?</p>
+      <h3 class="fw-bold mb-4 text-glow">The Ultimate Interactive Experience</h3>
+      <p class="text-muted mx-auto" style="max-width: 700px;">Our platform is designed to be beautiful, fast, and
+        highly customizable. With our premium dark mode interface, your audience will be captivated from the very
+        first question.</p>
+    </div>
+  </div>
+  </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-custom-new mt-auto pt-5 pb-3">
+    <div class="container">
+      <div class="row text-white mb-5">
+        <div class="col-6 col-md-2 mb-4">
+          <h5 class="fw-bold mb-4">Features</h5>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">AI presentation</a></li>
+            <li><a href="#">Live polling</a></li>
+            <li><a href="#">Word cloud</a></li>
+            <li><a href="#">Quiz</a></li>
+            <li><a href="#">Q&A</a></li>
+            <li><a href="#">Survey</a></li>
+            <li><a href="#">Presentations</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 mb-4">
+          <h5 class="fw-bold mb-4">Resources</h5>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">How to</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Education</a></li>
+            <li><a href="#">Templates</a></li>
+            <li><a href="#">Academy</a></li>
+            <li><a href="#">Webinars</a></li>
+            <li><a href="#">Comparison</a></li>
+            <li><a href="#">Stories</a></li>
+            <li><a href="#">Integrations</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-2 mb-4">
+          <h5 class="fw-bold mb-4">Details</h5>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">Legal</a></li>
+            <li><a href="#">Policies</a></li>
+            <li><a href="#">Accessibility</a></li>
+            <li><a href="#">Help center</a></li>
+            <li><a href="#">Requirements</a></li>
+            <li><a href="#">AI at Quizzer</a></li>
+            <li><a href="#">Cookie preferences</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-2 mb-4">
+          <h5 class="fw-bold mb-4">About us</h5>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">Press info</a></li>
+            <li><a href="#">The team</a></li>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Culture</a></li>
+            <li><a href="#">Benefits</a></li>
+            <li><a href="contact.php">Contact us</a></li>
+            <li><a href="#">Climate</a></li>
+            <li><a href="#">Investors</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-3 mb-4">
+          <h5 class="fw-bold mb-4">Choose your language</h5>
+          <button class="btn btn-light rounded-pill px-4 py-2 mb-4 fw-bold shadow-sm">English <i
+              class="fa-solid fa-chevron-down ms-2"></i></button>
+
+          <h5 class="fw-bold mb-4">Connect with us!</h5>
+          <div class="d-flex gap-2 social-box-icons mt-2">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Big Logo -->
+      <div class="text-start text-md-center mb-0">
+        <h1 class="font-heading fw-bold text-white huge-logo">Q u i z z e r</h1>
+      </div>
+
+      <!-- Bottom bar -->
+      <div
+        class="d-flex flex-column flex-md-row justify-content-between border-top border-light border-opacity-50 pt-3 text-white-50 mt-1 small">
+        <div>(c) 2026 Quizzer. All rights reserved.</div>
+        <div class="mt-2 mt-md-0 d-flex gap-3">
+          <a href="#" class="text-white-50 text-decoration-none hover-white">Privacy</a>
+          <a href="#" class="text-white-50 text-decoration-none hover-white">Terms and Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap & Main Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

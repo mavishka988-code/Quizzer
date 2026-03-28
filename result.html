@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quizzer - Results</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css?v=2">
+</head>
+
+<body class="d-flex flex-column min-vh-100" style="background: linear-gradient(135deg, #000c24 0%, #001f4d 100%);">
+
+  <nav class="navbar navbar-expand-lg navbar-custom sticky-top border-bottom border-dark border-1">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="fa-solid fa-shapes text-primary"></i> Quizzer
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="dashboard.html">DashBoard</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-flex">
+        <a href="login.html" class="profile-icon">
+          <i class="fa-regular fa-circle-user"></i>
+          <span>Log In</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container py-5 fade-in flex-grow-1">
+    <div class="row g-4 align-items-stretch" style="min-height: 550px;">
+
+      <!-- Left Tall Image -->
+      <div class="col-lg-3 d-none d-lg-block">
+        <div class="h-100 w-100 shadow-lg overflow-hidden"
+          style="border-radius: 20px; border: 2px solid rgba(0,212,255,0.2);">
+          <img src="images/left.webp" alt="Left Graphic" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+      </div>
+
+      <!-- Center Result Card -->
+      <div class="col-lg-6">
+        <div class="p-4 p-md-5 text-center h-100 d-flex flex-column justify-content-center shadow-lg"
+          style="background: rgba(255, 255, 255, 0.95); border-radius: 20px; border: 2px solid #00d4ff;">
+          <h2 class="display-6 mb-2 fw-bold text-glow" style="letter-spacing: 1px; color: #008f9e;">Congratulations!
+          </h2>
+
+          <div class="my-4">
+            <i class="fa-solid fa-trophy"
+              style="font-size: 7rem; color: #ffc107; text-shadow: 0 4px 15px rgba(255, 193, 7, 0.4);"></i>
+          </div>
+
+          <h4 class="mb-3 fw-bold fs-3" style="color: #002244;">Congrats, You have successfully<br>completed this quiz!
+          </h4>
+
+          <p class="text-muted small px-3 mx-auto" style="max-width: 400px; font-size: 0.9rem;">
+            Awesome job! You reached the end of the quiz session. Your final score and bonus coins have been
+            successfully awarded to your Quizzer profile.
+          </p>
+
+          <h3 class="fw-bold my-4" id="finalCoinsDisplay" style="color: #28a745;">Your Coins : 1025$</h3>
+
+          <div class="mb-5 fs-4" id="resultStarsRating">
+            <i class="fa-solid fa-star text-dark"></i>
+            <i class="fa-regular fa-star text-dark"></i>
+            <i class="fa-regular fa-star text-dark"></i>
+            <i class="fa-regular fa-star text-dark"></i>
+            <i class="fa-regular fa-star text-dark"></i>
+          </div>
+
+          <div class="d-flex flex-column flex-sm-row justify-content-center gap-3 mt-auto w-100 px-lg-4 pt-4">
+            <a href="quiz.html" class="btn px-4 py-3 fw-bold flex-fill shadow-sm text-white"
+              style="background-color: #6c757d; border: none; border-radius: 12px; font-size: 1.1rem; transition: transform 0.2s;">Re-Take
+              Quiz</a>
+            <a href="dashboard.html" class="btn px-4 py-3 fw-bold flex-fill shadow-sm text-white"
+              style="background: linear-gradient(135deg, #00d4ff, #007bff); border: none; border-radius: 12px; font-size: 1.1rem; transition: transform 0.2s;">Continue</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Tall Image -->
+      <div class="col-lg-3 d-none d-lg-block">
+        <div class="h-100 w-100 shadow-lg overflow-hidden"
+          style="border-radius: 20px; border: 2px solid rgba(0,212,255,0.2);">
+          <img src="images/left.webp" alt="Right Graphic" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="footer-custom-new mt-auto pt-5 pb-3">
+    <div class="container">
+      <div class="row text-white mb-5">
+        <div class="col-6 col-md-2 mb-4">
+          <h5 class="fw-bold mb-4">Features</h5>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">AI presentation</a></li>
+            <li><a href="#">Live polling</a></li>
+            <li><a href="#">Word cloud</a></li>
+            <li><a href="#">Quiz</a></li>
+            <li><a href="#">Q&A</a></li>
+            <li><a href="#">Survey</a></li>
+            <li><a href="#">Presentations</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 mb-4">
+          <h5 class="fw-bold mb-4">Resources</h5>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">How to</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Education</a></li>
+            <li><a href="#">Templates</a></li>
+            <li><a href="#">Academy</a></li>
+            <li><a href="#">Webinars</a></li>
+            <li><a href="#">Comparison</a></li>
+            <li><a href="#">Stories</a></li>
+            <li><a href="#">Integrations</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-2 mb-4">
+          <h5 class="fw-bold mb-4">Details</h5>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">Legal</a></li>
+            <li><a href="#">Policies</a></li>
+            <li><a href="#">Accessibility</a></li>
+            <li><a href="#">Help center</a></li>
+            <li><a href="#">Requirements</a></li>
+            <li><a href="#">AI at Quizzer</a></li>
+            <li><a href="#">Cookie preferences</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-2 mb-4">
+          <h5 class="fw-bold mb-4">About us</h5>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">Press info</a></li>
+            <li><a href="#">The team</a></li>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Culture</a></li>
+            <li><a href="#">Benefits</a></li>
+            <li><a href="contact.php">Contact us</a></li>
+            <li><a href="#">Climate</a></li>
+            <li><a href="#">Investors</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-3 mb-4">
+          <h5 class="fw-bold mb-4">Choose your language</h5>
+          <button class="btn btn-light rounded-pill px-4 py-2 mb-4 fw-bold shadow-sm">English <i
+              class="fa-solid fa-chevron-down ms-2"></i></button>
+
+          <h5 class="fw-bold mb-4">Connect with us!</h5>
+          <div class="d-flex gap-2 social-box-icons mt-2">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Big Logo -->
+      <div class="text-start text-md-center mb-0">
+        <h1 class="font-heading fw-bold text-white huge-logo">Q u i z z e r</h1>
+      </div>
+
+      <!-- Bottom bar -->
+      <div
+        class="d-flex flex-column flex-md-row justify-content-between border-top border-light border-opacity-50 pt-3 text-white-50 mt-1 small">
+        <div>(c) 2026 Quizzer. All rights reserved.</div>
+        <div class="mt-2 mt-md-0 d-flex gap-3">
+          <a href="#" class="text-white-50 text-decoration-none hover-white">Privacy</a>
+          <a href="#" class="text-white-50 text-decoration-none hover-white">Terms and Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
